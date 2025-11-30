@@ -1,0 +1,52 @@
+.background-primary-div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  transition: background-color 0.3s ease;
+
+  @media (max-width: 768px) {
+    padding: 0.5rem;
+  }
+}
+
+.background-secondary-first-div {
+  position: absolute;
+  inset: 0;
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+
+  @media (max-width: 768px) {
+    border-radius: 0.5rem; 
+  }
+}
+
+.background-secondary-second-div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 1;
+
+  @media (max-width: 768px) {
+    padding: 0.5rem;
+  }
+}
+
+/* High-res 2732x2048 and 2048x2732 */
+@media screen and (min-width: 2048px) and (min-height: 1536px) and (orientation: landscape) {
+  .background-main {
+    padding: 2rem !important;
+  }
+}
+
+/* iPad Air 13" 2024/2025 */
+@media screen and (min-width: 2732px) and (orientation: landscape) {
+  .background-main {
+    padding: 2.25rem;
+  }
+}

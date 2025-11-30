@@ -1,0 +1,129 @@
+.chessboard-primary-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  overflow: hidden; 
+}
+
+.chessboard {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  width: min(90vw, 90vh);
+  height: min(90vw, 90vh);
+  aspect-ratio: 1 / 1;
+  margin: auto;
+
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.white,
+.black {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+}
+
+.white {
+  background-color: #d1dfff;
+}
+
+.black {
+  background-color: #4b88cd;
+}
+
+.white.current-player,
+.black.current-player {
+  background-color: #ffae00;
+  box-shadow: 0 0 0.5rem 0.125rem rgba(255, 174, 0, 0.4); 
+  z-index: 1; 
+}
+
+.white.castling-partner,
+.black.castling-partner {
+  background-color: rgb(0, 224, 60);
+  box-shadow: 0 0 0.3rem 0.1rem rgba(15, 255, 80, 0.4);
+  z-index: 1;
+}
+
+.white .black {
+  position: relative;
+}
+
+.valid-move {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+
+  &.highlight-opponent {
+    background-color: rgba(255, 0, 0, 0.5);
+  }
+
+  &.highlight-move {
+    background-color: rgba(15, 255, 80, 0.4);
+  }
+}
+
+.pointer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background-color: grey;
+  opacity: 0.5;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.chess-pieces {
+  width: 75%;
+  height: 75%;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+  z-index: 5;
+}
+
+@media screen and (width: 2732px) and (height: 2048px) {
+  .chessboard,
+  .chess-board,
+  .board,
+  .board-container {
+    --board-max-w: calc(66.667vw - 3rem);
+    --board-max-h: calc(100vh - 3.5rem);
+
+    width: min(var(--board-max-w), var(--board-max-h));
+    height: auto;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+  }
+
+  .chessboard .row,
+  .chess-board .row {
+    overflow: hidden;
+  }
+}
+
+/* High-res – Board bleibt unverändert */
+@media screen and (min-width: 2048px) and (min-height: 1536px) and (orientation: landscape) {
+  /* Keine Änderungen am Board */
+}
+
+/* iPad Air 13" - ChessBoard bleibt unverändert */
+@media screen and (min-width: 2732px) and (orientation: landscape) {
+  /* Keine Änderungen am Board */
+}

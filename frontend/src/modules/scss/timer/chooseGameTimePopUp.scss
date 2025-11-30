@@ -1,0 +1,252 @@
+.choose-player-base-button.selected {
+  background-color: #22c55e;
+  color: white;
+  
+  &:hover {
+    background-color: #16a34a;
+  }
+}
+
+.popup-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  margin-bottom: 0.25rem; 
+}
+
+.choose-player-primary-div .choose-player-secondary-div .popup-header .title-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex: 1;
+  background-color: #8094c2;
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+  margin-right: 1rem;
+  min-height: 1.25rem; 
+}
+
+.choose-player-secondary-div .time-icon-header {
+  width: 2rem;
+  height: 2rem;
+  filter: brightness(0) invert(1);
+  flex-shrink: 0; 
+  position: absolute;
+  left: 1rem; 
+}
+
+.choose-player-secondary-div .popup-title {
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  width: 100%;
+  padding-left: 3rem;
+  padding-right: 1rem;
+}
+
+.close-button-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  background-color: #de4a4a;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  flex-shrink: 0;
+
+  &:hover {
+    background-color: #c43d3d;
+  }
+
+  .close-icon-header {
+    width: 1.5rem;
+    height: 1.5rem;
+    filter: brightness(0) invert(1); 
+  }
+}
+
+.player-selection-buttons {
+  margin-top: 0;
+}
+
+.custom-time-input {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.custom-minutes-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid #55678a;
+  border-radius: 0.375rem;
+  background-color: #2d3748;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  outline: none;
+  transition: border-color 0.3s ease;
+  text-align: center;
+
+  &:focus {
+    border-color: #8094c2;
+  }
+
+  &::placeholder {
+    color: #a0aec0;
+    text-align: center;
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &[type="number"] {
+    appearance: textfield;  
+   }
+}
+
+.submit-custom {
+  background-color: #22c55e;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+
+  &:hover:not(:disabled) {
+    background-color: #16a34a;
+  }
+
+  &:disabled {
+    background-color: #6b7280;
+    cursor: not-allowed;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .close-button-header {
+    &:hover {
+      transform: none;
+    }
+
+    &:active {
+      transform: none;
+      background-color: #a83232;
+    }
+  }
+
+  .submit-custom {
+    &:hover {
+      transform: none;
+    }
+
+    &:active {
+      transform: none;
+      background-color: #15803d;
+    }
+  }
+}
+
+/* High-res 2732x2048 */
+@media screen and (width: 2732px) and (height: 2048px) {
+  .choose-game-time-popup {
+    padding: 2rem;
+    border-radius: 1rem;
+    min-width: 480px;
+  }
+
+  .choose-game-time-popup h2 {
+    font-size: 1.5rem;
+  }
+
+  .choose-game-time-popup label {
+    font-size: 1.125rem;
+  }
+
+  .choose-game-time-popup input,
+  .choose-game-time-popup select {
+    font-size: 1.125rem;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .choose-game-time-popup button {
+    min-width: 200px;
+    min-height: 56px;
+    font-size: 1.125rem;
+  }
+}
+
+/* High-res landscape */
+@media screen and (min-width: 2048px) and (min-height: 1536px) and (orientation: landscape) {
+  .choose-game-time-popup {
+    padding: 2.5rem !important;
+    border-radius: 1.25rem !important;
+    min-width: 560px !important;
+  }
+
+  .choose-game-time-popup h2 {
+    font-size: 1.875rem !important;
+  }
+
+  .choose-game-time-popup label {
+    font-size: 1.375rem !important;
+  }
+
+  .choose-game-time-popup input,
+  .choose-game-time-popup select {
+    font-size: 1.375rem !important;
+    padding: 1rem 1.25rem !important;
+    border-radius: 0.625rem !important;
+  }
+
+  .choose-game-time-popup button {
+    min-width: 240px !important;
+    min-height: 64px !important;
+    font-size: 1.375rem !important;
+  }
+}
+
+/* iPad Air 13" 2024/2025 */
+@media screen and (min-width: 2732px) and (orientation: landscape) {
+  .choose-game-time-popup {
+    padding: 2.75rem;
+    border-radius: 1.375rem;
+    min-width: 640px;
+  }
+
+  .choose-game-time-popup h2 {
+    font-size: 2.125rem;
+  }
+
+  .choose-game-time-popup label {
+    font-size: 1.5rem;
+  }
+
+  .choose-game-time-popup input,
+  .choose-game-time-popup select {
+    font-size: 1.5rem;
+    padding: 1.125rem 1.5rem;
+    border-radius: 0.75rem;
+  }
+
+  .choose-game-time-popup button {
+    min-width: 280px;
+    min-height: 72px;
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;opacity:0.1;}
+	.st2{fill:#ffffff;}
+	.st3{fill:#ffffff;}
+</style>
+<g id="safe_border" class="st0">
+	<g class="st1">
+		<rect x="1" y="1" class="st2" width="62" height="62" fill="#ffffff"/>
+		<path class="st3" d="M62,2v60H2V2H62 M64,0H0v64h64V0L64,0z" fill="#ffffff"/>
+	</g>
+</g>
+<g id="final_icon">
+	<g>
+		<path d="M42,10V2H22v8H6v4h52v-4H42z M38,10H26V6h12V10z" fill="#ffffff"/>
+		<path d="M16,62h32l6-44H10L16,62z M14.6,22H24v36h-4.5L14.6,22z M36,58h-8V22h8V58z M44.5,58H40V22h9.4L44.5,58z" fill="#ffffff"/>
+	</g>
+</g>
+</svg>

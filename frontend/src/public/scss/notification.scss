@@ -1,0 +1,150 @@
+.notification-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  pointer-events: none;
+}
+
+.notification {
+  pointer-events: auto;
+  min-width: 300px;
+  max-width: 500px;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  color: white;
+  font-weight: 500;
+  
+  animation: slideInFromTop 0.3s ease-out;
+  
+  &--success {
+    background-color: #22c55e;
+    border-left: 0.5rem solid #16a34a;
+  }
+  
+  &--error {
+    background-color: #ef4444;
+    border-left: 0.5rem solid #dc2626;
+  }
+}
+
+.notification__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.notification__message {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.notification__close-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s ease;
+  flex-shrink: 0;
+  
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  &:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.notification__close-icon {
+  width: 1rem;
+  height: 1rem;
+  filter: brightness(0) invert(1);
+}
+
+@keyframes slideInFromTop {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .notification-container {
+    top: 0.5rem;
+    right: 0.5rem;
+    left: 0.5rem;
+  }
+  
+  .notification {
+    min-width: auto;
+    max-width: none;
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  .notification__close-button:hover {
+    background-color: transparent;
+  }
+  
+  .notification__close-button:active {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* High-res 2732x2048  */
+@media screen and (width: 2732px) and (height: 2048px) {
+  .notification {
+    padding: 1.25rem 1.75rem;
+    font-size: 1.125rem;
+    border-radius: 10px;
+    min-width: 320px;
+  }
+
+  .notification svg {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+/* High-res landscape */
+@media screen and (min-width: 2048px) and (min-height: 1536px) and (orientation: landscape) {
+  .notification {
+    padding: 1.5rem 2.25rem !important;
+    font-size: 1.375rem !important;
+    border-radius: 1rem !important;
+    min-width: 380px !important;
+  }
+
+  .notification svg {
+    width: 32px !important;
+    height: 32px !important;
+  }
+}
+
+/* iPad Air 13" 2024/2025 */
+@media screen and (min-width: 2732px) and (orientation: landscape) {
+  .notification {
+    padding: 1.75rem 2.5rem;
+    font-size: 1.5rem;
+    border-radius: 1.125rem;
+    min-width: 420px;
+  }
+
+  .notification svg {
+    width: 36px;
+    height: 36px;
+  }
+}

@@ -1,0 +1,82 @@
+.player-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 0.1rem;
+}
+
+.player-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  line-height: 1.2;
+  margin: 0;
+
+  &:last-of-type {
+    margin-bottom: 1.25rem;
+  }
+}
+
+.vs-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* High-res 2732x2048 */
+@media screen and (width: 2732px) and (height: 2048px) {
+  .choose-main {
+    padding: 1.5rem;
+    gap: 1.25rem;
+  }
+
+  .choose-main h2,
+  .choose-main .title {
+    font-size: 1.5rem;
+  }
+
+  .choose-main p,
+  .choose-main .text {
+    font-size: 1.125rem;
+  }
+}
+
+/* High-res landscape */
+@media screen and (min-width: 2048px) and (min-height: 1536px) and (orientation: landscape) {
+  .choose-main {
+    padding: 2rem !important;
+    gap: 1.75rem !important;
+  }
+
+  .choose-main h2,
+  .choose-main .title {
+    font-size: 1.875rem !important;
+  }
+
+  .choose-main p,
+  .choose-main .text {
+    font-size: 1.375rem !important;
+  }
+}
+
+/* iPad Air 13" 2024/2025 */
+@media screen and (min-width: 2732px) and (orientation: landscape) {
+  .choose-main {
+    padding: 2.25rem;
+    gap: 2rem;
+  }
+
+  .choose-main h2,
+  .choose-main .title {
+    font-size: 2.125rem;
+  }
+
+  .choose-main p,
+  .choose-main .text {
+    font-size: 1.5rem;
+  }
+}

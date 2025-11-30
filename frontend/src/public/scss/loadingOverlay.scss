@@ -1,0 +1,98 @@
+.loading-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.loading-box {
+  background: #111;
+  color: #fff;
+  padding: 1.25rem 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  box-shadow: 0 6px 30px rgba(0,0,0,0.4);
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(255,255,255,0.25);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.loading-text {
+  font-size: 0.95rem;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@media screen and (width: 2732px) and (height: 2048px){
+  .loading-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .loading-box {
+    padding: 1.75rem 2rem;
+    border-radius: 12px;
+  }
+
+  .spinner {
+    width: 32px;
+    height: 32px;
+    border-width: 4px;
+  }
+
+  .loading-text {
+    font-size: 1.25rem;
+  }
+}
+
+/* High-res landscape */
+@media screen and (min-width: 2048px) and (min-height: 1536px) and (orientation: landscape) {
+  .loading-box {
+    padding: 2.25rem 2.75rem !important;
+    border-radius: 1.25rem !important;
+  }
+
+  .spinner {
+    width: 40px !important;
+    height: 40px !important;
+    border-width: 5px !important;
+  }
+
+  .loading-text {
+    font-size: 1.5rem !important;
+  }
+}
+
+/* iPad Air 13" 2024/2025 */
+@media screen and (min-width: 2732px) and (orientation: landscape) {
+  .loading-box {
+    padding: 2.5rem 3rem;
+    border-radius: 1.375rem;
+  }
+
+  .spinner {
+    width: 44px;
+    height: 44px;
+    border-width: 5px;
+  }
+
+  .loading-text {
+    font-size: 1.75rem;
+  }
+}
